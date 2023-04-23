@@ -17,7 +17,7 @@ heart_disease = st.radio("Heart Disease?", ["1", "0"])
 
 def predict():
     float_features = [float(x) for x in [bmi]]
-    categorical_features = [gender,ever_married,Residence_type,Never_worked,hypertension,Govt_job,heart_disease]
+    categorical_features = [ever_married,Residence_type,Never_worked,hypertension,Govt_job,heart_disease]
     integer_features = [age]
 
     final_features = [np.array(float_features + integer_features + categorical_features)]
