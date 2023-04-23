@@ -4,7 +4,7 @@ import pickle
 
 model = pickle.load(open('model.pkl', 'rb'))
 
-st.title('What? :smoking:')
+st.title('Predict Brain Stroke? :brain:')
 
 age = st.slider("Age", 1, 85)
 ever_married = st.selectbox("Married", ["0", "1"])
@@ -13,11 +13,11 @@ Residence_type = st.selectbox("Residence", ["1", "0"])
 Never_worked = st.radio("Working?", ["1", "0"])
 hypertension = st.selectbox("hypertension", ["1", "0"])
 Govt_job = st.radio("Govt_job?", ["1", "0"])
-heart_disease = st.radio("Govt_job?", ["1", "0"])
+heart_disease = st.radio("Heart Disease?", ["1", "0"])
 
 def predict():
     float_features = [float(x) for x in [bmi]]
-    categorical_features = [gender, tartar,ever_married,Residence_type,Never_worked,hypertension,Govt_job,heart_disease]
+    categorical_features = [gender,ever_married,Residence_type,Never_worked,hypertension,Govt_job,heart_disease]
     integer_features = [age]
 
     final_features = [np.array(float_features + integer_features + categorical_features)]
