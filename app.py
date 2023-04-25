@@ -5,7 +5,9 @@ import pickle
 model = pickle.load(open('model.pkl', 'rb'))
 
 st.header('Predict Stroke :brain:')
-st.text('No: 0 and Yes: 1')
+st.divider()
+st.text('Yes: 1 and No: 0')
+st.text('Residence type - Urban: 1 and Rural: 0')
 
 age = st.slider("Age", 1, 85)
 ever_married = st.selectbox("Married", ["0", "1"])
