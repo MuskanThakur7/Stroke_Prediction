@@ -4,7 +4,8 @@ import pickle
 
 model = pickle.load(open('model.pkl', 'rb'))
 
-st.title('Predict Brain Stroke? :brain:')
+st.header('Predict Stroke :brain:')
+st.text('No: 0 and Yes: 1')
 
 age = st.slider("Age", 1, 85)
 ever_married = st.selectbox("Married", ["0", "1"])
