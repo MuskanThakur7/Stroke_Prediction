@@ -5,7 +5,6 @@ import pickle
 model = pickle.load(open('model.pkl', 'rb'))
 
 st.header('Predict Stroke :brain:')
-st.divider()
 st.text('Yes: 1 and No: 0')
 st.text('Residence type - Urban: 1 and Rural: 0')
 
